@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perico's Reviews</title>
+    <link rel="stylesheet" type="text/css" href="styles1.css">
+
+    <style>
+        h2{ 
+            text-transform: uppercase;
+            font-size: 28px;
+            font-weight: bold;
+            margin-bottom: 20px;    
+        }
+
+        .post, .comment {
+            border: 1px solid #ddd;
+            padding: 10px; 
+            margin-bottom: 10px;
+            border-radius: 5px;
+            background-color: #fff; 
+            color: #333; 
+        }
+
+        .post-header, .comment-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .post-body, .comment-body {
+            margin-top: 10px;
+        }
+
+        .votes {
+            display: flex;
+            align-items: center;
+        }
+
+        .vote-btn {
+            cursor: pointer;
+            margin-left: 5px;
+        }
+
+        .truncated {
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            max-width: 400px;
+            display: inline-block;
+            vertical-align: middle;
+            cursor: pointer;
+        }
+
+        .truncated:hover {
+            text-decoration: underline;
+            color: hsl(18, 75%, 57%);
+        }
+
+        .vote-count {
+            margin-left: 5px;
+        }
+
+        .username{ 
+            font-weight: bold;
+            font-style: normal;
+            font-size: 125%;
+            color: hsl(18, 75%, 57%);
+        }
+    </style>
+</head>
+
+<body>
+    <section id="reviews" class="reviews-section">
+        <a href="index.html">
+            <button id="exitButton" class="exit-button">Close Reviews</button>
+        </a>
+        
+        <h2>Kitchen City Reviews</h2>
+        <div id="reviewContent" class="review-content">
+            <!-- Post 1 -->
+            <div class="post" onclick="toggleComments('post1-comments')">
+                <div class="post-header">
+                    <span class="username">henry6yabmat</span>
+                    <div class="votes">
+                        <span class="upvote vote-btn">⬆️</span>
+                        <span class="vote-count" id="post1-upvotes">0</span>
+                        <span class="downvote vote-btn">⬇️</span>
+                        <span class="vote-count" id="post1-downvotes">0</span>
+                    </div>
+                </div>
+                <div class="post-body">
+                    <p class="truncated" onclick="toggleTruncate(this, 'fullPost1')">I've been a regular at Kitchen City DLSU for the past semester, and I have to say, this place never disappoints! Whether you're in the mood for Filipino comfort food or international cuisine, they've got it all. My personal favorite is their Chicken Teriyaki with rice – the chicken is always tender, and the sauce is the perfect blend of sweet and savory. Plus, the serving size is just right for a student's budget. Highly recommend giving this place a try if you haven't yet!
+                    </p>
+                    <p id="fullPost1" style="display:none;">I've been a regular at Kitchen City DLSU for the past semester, and I have to say, this place never disappoints! Whether you're in the mood for 		Filipino comfort food or international cuisine, they've got it all. My personal favorite is their Chicken Teriyaki with rice – the chicken is always tender, and the sauce is the perfect blend of sweet and savory. Plus, the serving size is just right for a student's budget. Highly recommend giving this place a try if you haven't yet!
+                    </p>
+                </div>
+                <div id="post1-comments" class="comments" style="display:none;">
+                    <div class="comment">
+                        <div class="comment-header">
+                            <span class="username">kitchencityfan</span>
+                            <div class="votes">
+                                <span class="upvote vote-btn">⬆️</span>
+                                <span class="vote-count" id="comment1-upvotes">0</span>
+                                <span class="downvote vote-btn">⬇️</span>
+                                <span class="vote-count" id="comment1-downvotes">0</span>
+                            </div>
+                        </div>
+                        <div class="comment-body">
+                            <p class="truncated" onclick="toggleTruncate(this, 'fullComment1')"> I couldn't agree more! The Chicken Teriyaki is amazing, but have you tried their Beef Salpicao? It's so flavorful and tender. Kitchen City is definitely a gem on campus.</p>
+                            <p id="fullComment1" style="display:none;"> I couldn't agree more! The Chicken Teriyaki is amazing, but have you tried their Beef Salpicao? It's so flavorful and tender. Kitchen City is definitely a gem on campus.</p>
+                        </div>
+                    </div>
+
+                    <div class="comment">
+                        <div class="comment-header">
+                            <span class="username">tasteexplorer</span>
+                            <div class="votes">
+                                <span class="upvote vote-btn">⬆️</span>
+                                <span class="vote-count" id="comment2-upvotes">0</span>
+                                <span class="downvote vote-btn">⬇️</span>
+                                <span class="vote-count" id="comment2-downvotes">0</span>
+                            </div>
+                        </div>
+                        <div class="comment-body">
+                            <p>Kitchen City is my go-to spot for a quick and satisfying meal between classes. I love their Kare-Kare – it's rich and creamy, and the bagoong they serve on the side is the best. The portions are generous too!</p>
+                        </div>
+                    </div>
+
+                    <div class="comment">
+                        <div class="comment-header">
+                            <span class="username">greenarcher</span>
+                            <div class="votes">
+                                <span class="upvote vote-btn">⬆️</span>
+                                <span class="vote-count" id="comment1-upvotes">0</span>
+                                <span class="downvote vote-btn">⬇️</span>
+                                <span class="vote-count" id="comment1-downvotes">0</span>
+                            </div>
+                        </div>
+                        <div class="comment-body">
+                            <p class="truncated" onclick="toggleTruncate(this, 'fullComment1')"> Absolutely love their pasta dishes! The Carbonara is my favorite – it's creamy and not too heavy, perfect for lunch. And they always serve it with garlic bread, which is a nice touch.
+                            </p>
+                            <p id="fullComment1" style="display:none;"> Absolutely love their pasta dishes! The Carbonara is my favorite – it's creamy and not too heavy, perfect for lunch. And they always serve it with garlic bread, which is a nice touch.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="comment">
+                        <div class="comment-header">
+                            <span class="username">healthynibbles</span>
+                            <div class="votes">
+                                <span class="upvote vote-btn">⬆️</span>
+                                <span class="vote-count" id="comment2-upvotes">0</span>
+                                <span class="downvote vote-btn">⬇️</span>
+                                <span class="vote-count" id="comment2-downvotes">0</span>
+                            </div>
+                        </div>
+                        <div class="comment-body">
+                            <p>For those looking for healthier options, their Grilled Chicken Salad is fantastic. Fresh ingredients and a light, tangy dressing that isn't overpowering. It's great to have healthy choices that still taste amazing.</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Post 2 -->
+            <div class="post" onclick="toggleComments('post2-comments')">
+                <div class="post-header">
+                    <span class="username">ezBill!</span>
+                    <div class="votes">
+                        <span class="upvote vote-btn">⬆️</span>
+                        <span class="vote-count" id="post2-upvotes">0</span>
+                        <span class="downvote vote-btn">⬇️</span>
+                        <span class="vote-count" id="post2-downvotes">0</span>
+                    </div>
+                </div>
+                <div class="post-body">
+                    <p>Had lunch at Kitchen City DLSU today and tried their Chicken Adobo. It was amazing! The chicken was tender, and the sauce had the perfect balance of flavors. Definitely coming back for more!</p>
+                </div>
+                <div id="post2-comments" class="comments" style="display:none;">
+                    <div class="comment">
+                        <div class="comment-header">
+                            <span class="username">bgcb0y</span>
+                            <div class="votes">
+                                <span class="upvote vote-btn">⬆️</span>
+                                <span class="vote-count" id="comment3-upvotes">0</span>
+                                <span class="downvote vote-btn">⬇️</span>
+                                <span class="vote-count" id="comment3-downvotes">0</span>
+                            </div>
+                        </div>
+                        <div class="comment-body">
+                            <p>Totally agree! Their Chicken Adobo is one of my favorites. Have you tried their Beef Tapa? It's equally delicious.</p>
+                        </div>
+                    </div>
+
+                    <div class="comment">
+                        <div class="comment-header">
+                            <span class="username">taftmudder</span>
+                            <div class="votes">
+                                <span class="upvote vote-btn">⬆️</span>
+                                <span class="vote-count" id="comment4-upvotes">0</span>
+                                <span class="downvote vote-btn">⬇️</span>
+                                <span class="vote-count" id="comment4-downvotes">0</span>
+                            </div>
+                        </div>
+                        <div class="comment-body">
+                            <p>I’ve been hearing a lot about Kitchen City's adobo. Can't wait to try it out next week.</p>
+                        </div>
+                    </div>
+                    <div class="comment">
+                        <div class="comment-header">
+                            <span class="username">v.Cruz</span>
+                            <div class="votes">
+                                <span class="upvote vote-btn">⬆️</span>
+                                <span class="vote-count" id="comment5-upvotes">0</span>
+                                <span class="downvote vote-btn">⬇️</span>
+                                <span class="vote-count" id="comment5-downvotes">0</span>
+                            </div>
+                        </div>
+                        <div class="comment-body">
+                            <p>Their food never disappoints. I usually go for the Pork Sinigang, but I'll give the Chicken Adobo a shot next time</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="review.js"></script>
+
+</body>
+</html>
