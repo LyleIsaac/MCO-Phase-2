@@ -1,0 +1,282 @@
+/* main page design */
+:root {
+    --white-alpha-20: hsla(0, 0%, 100%, 0.2);
+    --black: hsla(0, 0%, 0%, 1);
+    --black-alpha-15: hsla(0, 0%, 0%, 0.15);
+    --letterSpacing-1: 0.15em;
+    --weight-bold: 700;
+    --transition-1: 250ms ease;
+    --lineHeight-3: 1.5em;
+}
+.search-container {
+    margin-top: 20px;
+    text-align: center;
+}
+.search-input {
+    padding: 8px;
+    width: 300px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+.search-btn {
+    padding: 8px 20px;
+    background-color: var(--black);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.search-btn:hover {
+    background-color: var(--black-alpha-15);
+}
+/* Floating box style for reviews-section */
+.reviews-section {
+    position: fixed;
+    top: 60px; 
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    max-width:1200px;
+    height: calc(100vh - 60px); 
+    padding: 1em;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 10; 
+    overflow-y: auto; 
+   
+}
+.review-content {
+    max-height: 300px;
+    overflow-y: scroll;
+}
+.exit-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding: 8px 16px;
+    background-color: #ddd;
+    color: #333;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.exit-button:hover {
+    background-color: #ccc;
+}
+/* Additional styles for main page */
+body, h1 {
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #feb47b;
+    color: #333;
+    line-height: 1.6;
+    margin: 0;
+}
+.topbar {
+    display: flex;
+    justify-content: space-around;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding-block: 10px;
+    background-color: white;
+    border-bottom: 1px solid var(--white-alpha-20);
+    z-index: 4;
+    transition: var(--transition-1);
+}
+.container {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+.span {
+    transition: var(--transition-1);
+    color: var(--black);
+    font-weight: var(--weight-bold);
+    text-transform: uppercase;
+    letter-spacing: var(--letterSpacing-1);
+    line-height: var(--lineHeight-3);
+}
+header {
+    margin-top: 60px; 
+    text-align: center;
+}
+.header-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+header h1 {
+    margin: 0;
+}
+footer {
+    background-color: white;
+    color: black;
+    padding: 20px 0;
+    text-align: center;
+    margin-top: 10px; 
+    font-size: 25px;
+
+}
+
+.footer-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-nav {
+    margin-top: 10px;
+}
+
+.footer-nav a {
+    color: black;
+    text-decoration: none;
+    margin: 0 15px;
+}
+
+.footer-nav a:hover {
+    text-decoration: underline;
+}
+nav {
+    margin-top: 10px;
+}
+nav a {
+    color: #333;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+}
+nav a:hover {
+    text-decoration: underline;
+}
+main {
+    padding: 2em;
+}
+.background-section {
+    background-image: url('img/background.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 50%
+}
+
+.restaurant-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 columns */
+    gap: 1em;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.5em; 
+    overflow-y: auto;
+    background-attachment: fixed;         
+    background-repeat: no-repeat; 
+    padding: 1em;
+    border-radius: 5px; 
+    background-size: cover;
+    background-position: center;
+}
+
+.restaurant {
+    background-color: #1c1c1c; 
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 1em;
+    text-align: center;
+    cursor: pointer;
+}
+.restaurant img {
+    width: 100%; 
+    height: 250px; 
+    object-fit: cover; 
+    border-bottom: 1px solid #ddd;
+    border-radius: 5px 5px 0 0;
+}
+.restaurant h2 {
+    margin-top: 0.5em;
+    color: #fff; 
+}
+.restaurant p {
+    color: #fff; 
+}
+.rating {
+    font-size: 1.5em;
+    color: #ffd700;
+}
+.posts-title {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+h2{ 
+    text-transform: uppercase;
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 20px;    
+}
+
+.post, .comment {
+    border: 1px solid #ddd;
+    padding: 10px; 
+    margin-bottom: 10px;
+    border-radius: 5px;
+    background-color: #fff; 
+    color: #333; 
+}
+
+.post-header, .comment-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.post-body, .comment-body {
+    margin-top: 10px;
+}
+
+.votes {
+    display: flex;
+    align-items: center;
+}
+
+.vote-btn {
+    cursor: pointer;
+    margin-left: 5px;
+}
+
+.truncated {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    max-width: 400px;
+    display: inline-block;
+    vertical-align: middle;
+    cursor: pointer;
+}
+
+.truncated:hover {
+    text-decoration: underline;
+    color: hsl(18, 75%, 57%);
+}
+
+.vote-count {
+    margin-left: 5px;
+}
+
+.username{ 
+    font-weight: bold;
+    font-style: normal;
+    font-size: 125%;
+    color: hsl(18, 75%, 57%);
+}
