@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="styles2.css">
+  <title>Edit Profile</title>
+  <style>
+    /* Add basic styles for form elements and labels */
+    label {
+      display: block;
+      margin-bottom: 5px;
+    }
+    input[type="text"],
+    textarea {
+      padding: 5px;
+      border: 1px solid #ccc;
+      width: 100%;
+      margin-bottom: 15px;
+    }
+  </style>
+</head>
+<body>
+  <div class="header-box">
+    <h1>Edit Profile</h1>
+  </div>
+  
+  <form action="update_profile.php" method="post">  <label for="username">Username:</label>
+    <input type="text" id="username" name="username" required>
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required>
+
+    <label for="bio">Bio:</label>
+    <textarea id="bio" name="bio" rows="5"></textarea>
+
+    <button type="submit">Save Changes</button>
+  </form>
+</body>
+</html>
