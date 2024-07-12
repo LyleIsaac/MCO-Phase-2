@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perico's Reviews</title>
+    <link rel="stylesheet" type="text/css" href="styles1.css">
+</head>
+
+<body>
+    <section id="reviews" class="reviews-section">
+        <a href="index.html">
+            <button id="exitButton" class="exit-button">Close Reviews</button>
+        </a>
+        
+        <h2>Potato Corner Reviews</h2>
+        <div id="reviewContent" class="review-content">
+            <!-- Post 1 -->
+            <div class="post" onclick="toggleComments('post1-comments')">
+                <div class="post-header">
+                    <span class="username">walkthewalk</span>
+                    <div class="votes">
+                        <span class="upvote vote-btn">⬆️</span>
+                        <span class="vote-count" id="post1-upvotes">0</span>
+                        <span class="downvote vote-btn">⬇️</span>
+                        <span class="vote-count" id="post1-downvotes">0</span>
+                    </div>
+                </div>
+                <div class="post-body">
+                    <p class="truncated" onclick="toggleTruncate(this, 'fullPost1')">Just had the most amazing snack at Potato Corner! 🥔🎉 Their BBQ flavored fries are out of this world. The perfect combination of crunchy and savory, with just the right amount of seasoning. Can't get enough of them! Highly recommend trying it out if you're in the area. #PotatoCorner #SnackTime #BBQFries
+                    </p>
+                    <p id="fullPost1" style="display:none;">Just had the most amazing snack at Potato Corner! 🥔🎉 Their BBQ flavored fries are out of this world. The perfect combination of crunchy and savory, with just the right amount of seasoning. Can't get enough of them! Highly recommend trying it out if you're in the area. #PotatoCorner #SnackTime #BBQFries
+                    </p>
+                </div>
+                
+                <div id="post1-comments" class="comments" style="display:none;">
+                    <div class="comment">
+                        <div class="comment-header">
+                            <span class="username">friesandice</span>
+                            <div class="votes">
+                                <span class="upvote vote-btn">⬆️</span>
+                                <span class="vote-count" id="comment1-upvotes">0</span>
+                                <span class="downvote vote-btn">⬇️</span>
+                                <span class="vote-count" id="comment1-downvotes">0</span>
+                            </div>
+                        </div>
+                        <div class="comment-body">
+                            <p class="truncated" onclick="toggleTruncate(this, 'fullComment1')">Totally agree! Potato Corner's BBQ fries are my absolute favorite. Always my go-to snack whenever I'm on campus. 😋🍟
+                            </p>
+                            <p id="fullComment1" style="display:none;">Totally agree! Potato Corner's BBQ fries are my absolute favorite. Always my go-to snack whenever I'm on campus. 😋🍟
+
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="comment">
+                        <div class="comment-header">
+                            <span class="username">peterpotato</span>
+                            <div class="votes">
+                                <span class="upvote vote-btn">⬆️</span>
+                                <span class="vote-count" id="comment2-upvotes">0</span>
+                                <span class="downvote vote-btn">⬇️</span>
+                                <span class="vote-count" id="comment2-downvotes">0</span>
+                            </div>
+                        </div>
+                        <div class="comment-body">
+                            <p>I've been craving Potato Corner's fries all week! They're seriously addictive. Might have to swing by tomorrow for a quick snack break
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="comment">
+                        <div class="comment-header">
+                            <span class="username">notunderweight</span>
+                            <div class="votes">
+                                <span class="upvote vote-btn">⬆️</span>
+                                <span class="vote-count" id="comment1-upvotes">0</span>
+                                <span class="downvote vote-btn">⬇️</span>
+                                <span class="vote-count" id="comment1-downvotes">0</span>
+                            </div>
+                        </div>
+                        <div class="comment-body">
+                            <p class="truncated" onclick="toggleTruncate(this, 'fullComment1')">Potato Corner never disappoints! Their fries are always fresh and flavorful. Plus, they have the best variety of toppings. Can't wait to try their wasabi flavor next time!
+                            </p>
+                            <p id="fullComment1" style="display:none;">Potato Corner never disappoints! Their fries are always fresh and flavorful. Plus, they have the best variety of toppings. Can't wait to try their wasabi flavor next time!
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="comment">
+                        <div class="comment-header">
+                            <span class="username">classclown</span>
+                            <div class="votes">
+                                <span class="upvote vote-btn">⬆️</span>
+                                <span class="vote-count" id="comment1-upvotes">0</span>
+                                <span class="downvote vote-btn">⬇️</span>
+                                <span class="vote-count" id="comment1-downvotes">0</span>
+                            </div>
+                        </div>
+                        <div class="comment-body">
+                            <p class="truncated" onclick="toggleTruncate(this, 'fullComment1')">Ugh, now I'm hungry! Thanks for the temptation, haha. Potato Corner's fries are legendary, no doubt about it. Definitely hit them up after my next class. 😄👍
+                            </p>
+                            <p id="fullComment1" style="display:none;">Ugh, now I'm hungry! Thanks for the temptation, haha. Potato Corner's fries are legendary, no doubt about it. Definitely hit them up after my next class. 😄👍
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Post 2 -->
+            <div class="post" onclick="toggleComments('post2-comments')">
+                <div class="post-header">
+                    <span class="username">superPanda</span>
+                    <div class="votes">
+                        <span class="upvote vote-btn">⬆️</span>
+                        <span class="vote-count" id="post2-upvotes">0</span>
+                        <span class="downvote vote-btn">⬇️</span>
+                        <span class="vote-count" id="post2-downvotes">0</span>
+                    </div>
+                </div>
+                <div class="post-body">
+                    <p> I recently visited Potato Corner at DLSU and indulged in their amazing flavored fries! The variety of flavors they offer is truly impressive, from classic BBQ to the tangy sour cream and the spicy kick of wasabi. Each fry is perfectly crispy on the outside and fluffy on the inside, making it a satisfying snack for any occasion. Whether you're a fan of savory or spicy flavors, Potato Corner has something for everyone. Highly recommend trying it out
+                    </p>
+                </div>
+                <div id="post2-comments" class="comments" style="display:none;">
+                    <div class="comment">
+                        <div class="comment-header">
+                            <span class="username">optimystic</span>
+                            <div class="votes">
+                                <span class="upvote vote-btn">⬆️</span>
+                                <span class="vote-count" id="comment3-upvotes">0</span>
+                                <span class="downvote vote-btn">⬇️</span>
+                                <span class="vote-count" id="comment3-downvotes">0</span>
+                            </div>
+                        </div>
+                        <div class="comment-body">
+                            <p>I couldn't agree more! Potato Corner's BBQ fries are my go-to snack on campus. The flavor is just right, not too overpowering but enough to satisfy my cravings. Plus, they're always served fresh and piping hot! 
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="comment">
+                        <div class="comment-header">
+                            <span class="username">jude</span>
+                            <div class="votes">
+                                <span class="upvote vote-btn">⬆️</span>
+                                <span class="vote-count" id="comment4-upvotes">0</span>
+                                <span class="downvote vote-btn">⬇️</span>
+                                <span class="vote-count" id="comment4-downvotes">0</span>
+                            </div>
+                        </div>
+                        <div class="comment-body">
+                            <p> Totally obsessed with Potato Corner's sour cream fries! They're so addictive, I can't get enough of them. The combination of the creamy sour cream flavor with the crispy texture of the fries is pure perfection. Definitely a must-try for any fries lover!  	
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="comment">
+                        <div class="comment-header">
+                            <span class="username">justeatit</span>
+                            <div class="votes">
+                                <span class="upvote vote-btn">⬆️</span>
+                                <span class="vote-count" id="comment5-upvotes">0</span>
+                                <span class="downvote vote-btn">⬇️</span>
+                                <span class="vote-count" id="comment5-downvotes">0</span>
+                            </div>
+                        </div>
+                        <div class="comment-body">
+                            <p>I recently tried Potato Corner's wasabi fries, and wow, they really pack a punch! The wasabi flavor is intense but not overwhelming, and it pairs surprisingly well with the fries. It's a great option if you're looking for something with a bit of heat. Highly recommend giving it a try, but be prepared for a flavor explosion!
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="review.js"></script>
+    
+</body>
+</html>
