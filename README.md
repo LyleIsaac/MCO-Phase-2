@@ -11,5 +11,5 @@
 
 1. Clone the repository:
    ```sh
-   git clone <repository-url>
+   git clone <https://github.com/LyleIsaac/MCO-Phase-2.git>
    cd restaurant-review
