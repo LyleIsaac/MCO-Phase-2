@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Create Review</title>
+</head>
+<body>
+    <div id="review-form-container">
+        <form action="/createReview" method="post" enctype="multipart/form-data">
+            <label for="title">Title:</label>
+            <input type="text" name="title" required><br><br>
+            <label for="comment">Comment:</label>
+            <textarea name="comment" rows="5" cols="50" required></textarea><br><br>
+            <label for="recommended">Rating:</label><br>
+            <input type="radio" name="recommended" value="yes" required> Recommended<br>
+            <input type="radio" name="recommended" value="no" required> Not Recommended<br><br>
+            <label for="media">Attach Media:</label>
+            <input type="file" name="media" accept="image/*,video/*"><br><br>
+            <button type="submit">Submit Review</button>
+        </form>
+    </div>
+    <script>
+        // checks if user has acc
+        document.addEventListener('DOMContentLoaded', function() {
+            fetch('/getUserInfo')  
+                .then(response => response.json())
+                .then(data => {
+                    if (data.is_restaurant) {
+                        document.getElementById('review-form-container').innerHTML = '<p>Restaurant accounts cannot post reviews.</p>';
+                    }
+                })
+                .catch(error => console.error('Error:', error));
+        });
+    </script>
+</body>
+</html>

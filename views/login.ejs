@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Login</title>
+        <link rel="stylesheet" type="text/css" href="/css/styles2.css">
+    </head>
+    <body>
+        <div class="header-box">
+            <h1>Log in</h1>
+        </div>
+        <form id="loginForm">
+            <label for="username">Username:</label>
+            <input type="text" id="username" required><br><br>
+            <label for="password">Password:</label>
+            <input type="password" id="password" required><br>
+            <label for="remember">Remember Me:</label>
+            <input type="checkbox" id="remember"><br>
+            <button type="submit">Login</button>
+        </form>
+
+        <script>
+            document.getElementById('loginForm').addEventListener('submit', async function(event) {
+                event.preventDefault();
+
+                const uname = document.getElementById('username').value;
+                const pass = document.getElementById('password').value;
+                const remember = document.getElementById('remember').checked;
+
+                const response = await fetch('/login', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({ username: uname, password: pass, remember: remember })
+                });
+
+                const result = await response.json();
+
+                if (result.success) {
+                    window.location = "loggedin.html";
+                } else {
+                    alert("Account not Found!");
+                }
+            });
+        </script>
+    </body>
+</html>

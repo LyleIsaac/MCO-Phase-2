@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Delight - DLSU Food Stores Review</title>
+    <link rel="stylesheet" type="text/css" href="styles1.css">
+    <link rel="preload" as="image" href="./img/24-chicken.jpeg">
+</head>
+<body>
+    <div class="topbar">
+        <div class="container">
+            <span class="span">De La Salle University - Manila</span>
+            <span class="span">+63 917 121 1012</span>
+            <span class="span">fooddelight@restaurantreview.com</span>
+        </div>
+    </div>
+    <header>
+        <div class="header-container">
+            <h1>Food Delight - DLSU Food Stores Review</h1>
+            <nav>
+                <a href="register.html">Sign up</a>
+                <a href="login.html">Log in</a>
+                <a href="editProfile.html">Edit Profile</a>
+                <a href="userProfile.html">Profile</a>
+            </nav>
+            <div class="search-container">
+                <input type="text" id="search-input" class="search-input" placeholder="Search...">
+                <button id="search-btn" class="search-btn">Search</button>
+                <select id="rating-filter">
+                    <option value="all">All Ratings</option>
+                    <option value="5">★★★★★</option>
+                    <option value="4">★★★★☆</option>
+                    <option value="3">★★★☆☆</option>
+                    <option value="2">★★☆☆☆</option>
+                    <option value="1">★☆☆☆☆</option>
+                </select>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="background-section"></div>
+        <section class="restaurant-list" id="restaurant-list">
+            <a href="pericos-review.html" class="review-link" data-rating="4">
+                <div class="restaurant">
+                    <img src="img/pericos.jpeg" alt="Perico's">
+                    <h2>Perico's</h2>
+                    <p>Perico's at DLSU is a beloved campus eatery or canteen known for its delightful and budget-friendly Filipino cuisine. Students flock to Perico's for its hearty and flavorful meals, including favorites like chicken adobo, sinigang, and crispy lechon kawali.</p>
+                    <div class="rating">★★★★☆</div>
+                </div>
+            </a>
+            <a href="kitchenCity-review.html" class="review-link" data-rating="3">
+                <div class="restaurant">
+                    <img src="img/kitchen-city.jpeg" alt="Kitchen City">
+                    <h2>Kitchen City</h2>
+                    <p>Kitchen City DLSU is a dining spot on campus, celebrated for its diverse menu and comforting meals. It offers a wide array of dishes, ranging from savory Filipino classics to international favorites, all crafted with fresh ingredients and a focus on quality.</p>
+                    <div class="rating">★★★☆☆</div>
+                </div>
+            </a>
+            <a href="24Chicken-review.html" class="review-link" data-rating="5">
+                <div class="restaurant">
+                    <img src="img/24chicken.jpeg" alt="24 Chicken">
+                    <h2>24 Chicken</h2>
+                    <p>24 Chicken DLSU is a student favorite known for its irresistible Korean-style fried chicken. This eatery offers a variety of flavors, from classic soy garlic to spicy hot, ensuring there's something for every palate. Each piece of chicken is perfectly crispy on the outside and juicy on the inside, served with a choice of sauces that elevate the taste experience.</p>
+                    <div class="rating">★★★★★</div>
+                </div>
+            </a>
+            <a href="bacsilog-review.html" class="review-link" data-rating="4">
+                <div class="restaurant">
+                    <img src="img/bacsi.jpeg" alt="Ate Rica's Bacsilog">
+                    <h2>Ate Rica's Bacsilog</h2>
+                    <p>Ate Rica’s BACSILOG on-the-go is best known for serving tasty, quality, fast, and clean superior-silog meals in schools, commercial spaces, and supermarkets. This includes our anchor offering – the bacsilog or bacon silog – an innovative and alternative variant on the Filipino silog fare. They provide affordable meals for students, young professionals, and others!</p>
+                    <div class="rating">★★★★☆</div>
+                </div>
+            </a>
+            <a href="potatoCorner-review.html" class="review-link" data-rating="3">
+                <div class="restaurant">
+                    <img src="img/potatocorner.jpeg" alt="Potato Corner">
+                    <h2>Potato Corner</h2>
+                    <p>Potato Corner in DLSU is a must-visit for students craving a tasty snack. Renowned for its signature flavored fries, Potato Corner offers a variety of options including BBQ, cheese, sour cream, and the irresistible wasabi flavor.</p>
+                    <div class="rating">★★★☆☆</div>
+                </div>
+            </a>
+            <a href="fruitas-review.html" class="review-link" data-rating="5">
+                <div class="restaurant">
+                    <img src="img/fruitas.jpeg" alt="Fruitas">
+                    <h2>Fruitas</h2>
+                    <p>Fruitas in DLSU is a go-to spot for students seeking a refreshing and healthy drink. Specializing in freshly made fruit juices, and smoothies. Fruitas offers a vibrant menu packed with a variety of tropical and local fruits.</p>
+                    <div class="rating">★★★★★</div>
+                </div>
+            </a>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <p>&copy; 2024 Food Delight. All rights reserved.</p>
+            <nav class="footer-nav">
+                <a href="privacy.html">Privacy Policy</a>
+                <a href="terms.html">Terms of Service</a>
+                <a href="contact.html">Contact Us</a>
+            </nav>
+        </div>
+    </footer>
+
+    <script>
+        window.onload = function() {
+            const searchInput = document.getElementById('search-input');
+            const searchBtn = document.getElementById('search-btn');
+            const ratingFilter = document.getElementById('rating-filter');
+            const restaurantList = document.getElementById('restaurant-list');
+            const restaurants = restaurantList.getElementsByClassName('review-link');
+
+            searchBtn.addEventListener('click', function() {
+                const searchTerm = searchInput.value.toLowerCase();
+                const rating = ratingFilter.value;
+                for (const restaurant of restaurants) {
+                    const title = restaurant.querySelector('h2').textContent.toLowerCase();
+                    const restaurantRating = restaurant.getAttribute('data-rating');
+                    if (title.includes(searchTerm) && (rating === 'all' || restaurantRating === rating)) {
+                        restaurant.style.display = '';
+                    } else {
+                        restaurant.style.display = 'none';
+                    }
+                }
+            });
+
+            ratingFilter.addEventListener('change', function() {
+                const rating = ratingFilter.value;
+                const searchTerm = searchInput.value.toLowerCase();
+                for (const restaurant of restaurants) {
+                    const title = restaurant.querySelector('h2').textContent.toLowerCase();
+                    const restaurantRating = restaurant.getAttribute('data-rating');
+                    if (title.includes(searchTerm) && (rating === 'all' || restaurantRating === rating)) {
+                        restaurant.style.display = '';
+                    } else {
+                        restaurant.style.display = 'none';
+                    }
+                }
+            });
+        }
+    </script>
+
+    <script src="top_posts.js"></script>
+</body>
+</html>

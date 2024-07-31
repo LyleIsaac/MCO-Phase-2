@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Account Registration</title>
+    <link rel="stylesheet" type="text/css" href="/css/styles3.css">
+</head>
+<body>
+    <div class="header-box">
+        <h2>Register to Post a Review</h2>
+    </div>
+    <form action="/register" method="post" enctype="multipart/form-data">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required><br><br>
+        
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required><br><br>
+        
+        <label for="avatar">Avatar:</label>
+        <input type="file" id="avatar" name="avatar" accept="image/*" required><br><br>
+        
+        <label for="description">Short Description:</label>
+        <textarea id="description" name="description"></textarea><br><br>
+
+        <label for="is_restaurant">Register as Restaurant:</label>
+        <input type="checkbox" id="is_restaurant" name="is_restaurant"><br><br>
+        
+        <input type="submit" value="Register">
+    </form>    
+</body>
+</html>
