@@ -23,10 +23,6 @@ function getRandomInt(max) {
 }
 
 window.onload = function() {
-    document.getElementById('post1-upvotes').innerText = getRandomInt(25);
-    document.getElementById('post1-downvotes').innerText = getRandomInt(25);
-    document.getElementById('post2-upvotes').innerText = getRandomInt(25);
-    document.getElementById('post2-downvotes').innerText = getRandomInt(25);
     document.getElementById('comment1-upvotes').innerText = getRandomInt(25);
     document.getElementById('comment1-downvotes').innerText = getRandomInt(25);
     document.getElementById('comment2-upvotes').innerText = getRandomInt(25);

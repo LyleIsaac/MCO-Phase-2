@@ -1,4 +1,4 @@
-/* main page design */
+/* Main page design */
 :root {
     --white-alpha-20: hsla(0, 0%, 100%, 0.2);
     --black: hsla(0, 0%, 0%, 1);
@@ -8,16 +8,19 @@
     --transition-1: 250ms ease;
     --lineHeight-3: 1.5em;
 }
+
 .search-container {
     margin-top: 20px;
     text-align: center;
 }
+
 .search-input {
     padding: 8px;
     width: 300px;
     border: 1px solid #ccc;
     border-radius: 5px;
 }
+
 .search-btn {
     padding: 8px 20px;
     background-color: var(--black);
@@ -26,9 +29,11 @@
     border-radius: 5px;
     cursor: pointer;
 }
+
 .search-btn:hover {
     background-color: var(--black-alpha-15);
 }
+
 .reviews-section {
     position: fixed;
     top: 60px; /* Adjust to match the height of the header */
@@ -45,11 +50,13 @@
     z-index: 10; /* Ensure it is above other elements */
     overflow-y: auto; /* Allow scrolling if content overflows */
 }
+
 .review-content {
     flex-grow: 1; /* Make this section take up all available space */
     overflow-y: auto; /* Allow scrolling if content overflows */
     padding-right: 10px; /* Add some padding on the right to avoid overlap with the scrollbar */
 }
+
 .exit-button {
     position: absolute;
     top: 10px;
@@ -61,14 +68,17 @@
     border-radius: 5px;
     cursor: pointer;
 }
+
 .exit-button:hover {
     background-color: #ccc;
 }
+
 /* Additional styles for main page */
 body, h1 {
     margin: 0;
     padding: 0;
 }
+
 body {
     font-family: Arial, Helvetica, sans-serif;
     background-color: #feb47b;
@@ -76,6 +86,7 @@ body {
     line-height: 1.6;
     margin: 0;
 }
+
 .topbar {
     display: flex;
     justify-content: space-around;
@@ -89,11 +100,13 @@ body {
     z-index: 4;
     transition: var(--transition-1);
 }
+
 .container {
     display: flex;
     justify-content: space-around;
     width: 100%;
 }
+
 .span {
     transition: var(--transition-1);
     color: var(--black);
@@ -102,18 +115,22 @@ body {
     letter-spacing: var(--letterSpacing-1);
     line-height: var(--lineHeight-3);
 }
+
 header {
     margin-top: 60px; /* Add space for the top bar */
     text-align: center;
 }
+
 .header-container {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
+
 header h1 {
     margin: 0;
 }
+
 footer {
     background-color: white;
     color: black;
@@ -121,7 +138,6 @@ footer {
     text-align: center;
     margin-top: 10px; 
     font-size: 25px;
-
 }
 
 .footer-container {
@@ -143,21 +159,26 @@ footer {
 .footer-nav a:hover {
     text-decoration: underline;
 }
+
 nav {
     margin-top: 10px;
 }
+
 nav a {
     color: #333;
     text-decoration: none;
     margin: 0 15px;
     font-weight: bold;
 }
+
 nav a:hover {
     text-decoration: underline;
 }
+
 main {
     padding: 2em;
 }
+
 .background-section {
     background-image: url('/img/background.jpeg');
     background-size: cover;
@@ -169,7 +190,7 @@ main {
     width: 100%;
     height: 100%;
     z-index: -1;
-    opacity: 50%
+    opacity: 50%;
 }
 
 .restaurant-list {
@@ -195,6 +216,7 @@ main {
     text-align: center;
     cursor: pointer;
 }
+
 .restaurant img {
     width: 100%; /* Full width of the container */
     height: 250px; /* Fixed height */
@@ -202,23 +224,27 @@ main {
     border-bottom: 1px solid #ddd;
     border-radius: 5px 5px 0 0;
 }
+
 .restaurant h2 {
     margin-top: 0.5em;
     color: #fff; /* White color for restaurant name */
 }
+
 .restaurant p {
     color: #fff; /* White color for description */
 }
+
 .rating {
     font-size: 1.5em;
-    color: #ffd700; /* gold color for stars */
+    color: #ffd700; /* Gold color for stars */
 }
+
 .posts-title {
     font-size: 24px;
     font-weight: bold;
 }
 
-h2{ 
+h2 { 
     text-transform: uppercase;
     font-size: 28px;
     font-weight: bold;
@@ -232,6 +258,7 @@ h2{
     border-radius: 5px;
     background-color: #fff; /* Change background color */
     color: #333; /* Change text color */
+    position: relative; /* Position relative to allow absolute positioning of children */
 }
 
 .post-header, .comment-header {
@@ -244,14 +271,21 @@ h2{
     margin-top: 10px;
 }
 
+.post {
+    position: relative; /* Make sure post is relative to position votes absolutely */
+}
+
 .votes {
     display: flex;
-    align-items: center;
+    align-items: center; 
+    position: absolute;
+    bottom: 10px; 
+    right: 10px; 
 }
 
 .vote-btn {
     cursor: pointer;
-    margin-left: 5px;
+    margin: 0 2px; /* Space between vote buttons */
 }
 
 .truncated {
@@ -270,10 +304,10 @@ h2{
 }
 
 .vote-count {
-    margin-left: 5px;
+    margin-left: 2px;
 }
 
-.username{ 
+.username { 
     font-weight: bold;
     font-style: normal;
     font-size: 125%;
@@ -318,7 +352,6 @@ h2{
     color: #ffd700; /* Gold color for stars */
 }
 
-
 /* Style for the Add Comment button */
 .add-comment button {
     background-color: #e0e0e0; /* Light grey background */
@@ -356,7 +389,7 @@ h2{
     padding: 15px;
     border: 1px solid #ddd; /* Light border */
     border-radius: 4px;
-     margin-bottom: 10px;
+    margin-bottom: 10px;
 }
 
 .comment-form textarea {
@@ -395,7 +428,6 @@ h2{
     outline: none;
     box-shadow: 0 0 0 2px rgba(38, 143, 255, 0.5); /* Subtle shadow for focus */
 }
-
 
 .user-info {
     display: flex;

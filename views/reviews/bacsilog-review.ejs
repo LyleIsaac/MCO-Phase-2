@@ -7,6 +7,85 @@
     <title>Perico's Reviews</title>
     <link rel="stylesheet" type="text/css" href="/css/styles1.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <style>
+        h2 {
+            text-transform: uppercase;
+            font-size: 28px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .post, .comment {
+            border: 1px solid #ddd;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            background-color: #fff; /* Change background color */
+            color: #333; /* Change text color */
+        }
+
+        .post-header, .comment-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .post-body, .comment-body {
+            margin-top: 10px;
+        }
+
+        .votes {
+            display: flex;
+            align-items: center;
+        }
+
+        .vote-btn {
+            cursor: pointer;
+            margin-left: 5px;
+        }
+
+        .vote-count {
+            margin-left: 5px;
+        }
+
+        .username {
+            font-weight: bold;
+            font-style: normal;
+            font-size: 125%;
+            color: hsl(18, 75%, 57%);
+        }
+
+        .truncated {
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            max-width: 400px;
+            display: inline-block;
+            vertical-align: middle;
+            cursor: pointer;
+        }
+
+        .truncated:hover {
+            text-decoration: underline;
+            color: hsl(18, 75%, 57%);
+        }
+
+        .post {
+            position: relative; /* Needed for positioning the rating */
+            margin-bottom: 20px; /* Adjust as needed */
+        }
+
+    .rating {
+            position: absolute;
+            top: 10px; /* Adjust as needed */
+            right: 10px; /* Adjust as needed */
+            font-size: 24px; /* Adjust size as needed */
+            color: gold; /* Adjust color as needed */
+        }
+
+    </style>
+
 </head>
 
 <body>
@@ -24,14 +103,10 @@
                         <img src="../img/medium.jpg" alt="Profile Picture" class="profile-pic">
                         <span class="username">typhoonX</span>
                     </div>
-                    <div class="votes">
-                        <span class="upvote vote-btn">⬆️</span>
-                        <span class="vote-count" id="post1-upvotes">0</span>
-                        <span class="downvote vote-btn">⬇️</span>
-                        <span class="vote-count" id="post1-downvotes">0</span>
-                    </div>
+                    
                 </div>
                 <h3>Ate Rica's Bacsilog - A Comfort Food Experience</h3>
+                <div class="rating">★★★★☆</div>
                 <div class="post-body">
                     <p class="truncated" onclick="toggleTruncate(this, 'fullPost1')">Just had the most amazing meal at Ate Rica's Bacsilog! 🍳🥓 The combination of bacon, garlic fried rice, and a perfectly fried egg topped with their special sauce is simply irresistible. The flavors burst in your mouth with every bite, and it's the ultimate comfort food! If you haven't tried it yet, you're seriously missing out. Highly recommend giving it a taste! 😋 #AteRicasBacsilog #ComfortFood #Delicious
                     </p>
@@ -179,14 +254,10 @@
                         <img src="path/to/chickenLover89-profile-pic.jpg" alt="Profile Picture" class="profile-pic">
                         <span class="username">notalunatic</span>
                     </div>
-                    <div class="votes">
-                        <span class="upvote vote-btn">⬆️</span>
-                        <span class="vote-count" id="post2-upvotes">0</span>
-                        <span class="downvote vote-btn">⬇️</span>
-                        <span class="vote-count" id="post2-downvotes">0</span>
-                    </div>
+                   
                 </div>
                 <h3>A Delicious Taste of Filipino Comfort Food</h3>
+                <div class="rating">★★★★☆</div>
                 <div class="post-body">
                     
                     <p>I recently had the pleasure of trying Ate Rica's Bacsilog, and it was a delightful experience that brought back memories of home-cooked meals. This iconic dish, consisting of bacon, sinaing (plain white rice), and itlog (fried egg), is a Filipino comfort food staple. Ate Rica's version, however, takes it to a whole new level with its flavorful bacon, perfectly seasoned rice, and perfectly cooked egg, all topped with their special savory sauce. It's a hearty and satisfying meal that's perfect for any time of day. If you're craving a taste of home or just want to experience authentic Filipino flavors, Ate Rica's Bacsilog is a must-try!</p>

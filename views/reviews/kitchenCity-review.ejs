@@ -70,6 +70,19 @@
             font-size: 125%;
             color: hsl(18, 75%, 57%);
         }
+
+        .post {
+            position: relative; /* Needed for positioning the rating */
+            margin-bottom: 20px; /* Adjust as needed */
+        }
+
+    .rating {
+            position: absolute;
+            top: 10px; /* Adjust as needed */
+            right: 10px; /* Adjust as needed */
+            font-size: 24px; /* Adjust size as needed */
+            color: gold; /* Adjust color as needed */
+        }
     </style>
 </head>
 
@@ -88,14 +101,10 @@
                         <img src="path/to/cos122qt-profile-pic.jpg" alt="Profile Picture" class="profile-pic">
                         <span class="username">henry6yabmat</span>
                     </div>
-                    <div class="votes">
-                        <span class="upvote vote-btn">⬆️</span>
-                        <span class="vote-count" id="post1-upvotes">0</span>
-                        <span class="downvote vote-btn">⬇️</span>
-                        <span class="vote-count" id="post1-downvotes">0</span>
-                    </div>
+                   
                 </div>
                 <h3>My Favorite Dish at Kitchen City DLSU</h3>
+                <div class="rating">★★★☆☆</div>
                 <div class="post-body">
                     <p class="truncated" onclick="toggleTruncate(this, 'fullPost1')">I've been a regular at Kitchen City DLSU for the past semester, and I have to say, this place never disappoints! Whether you're in the mood for Filipino comfort food or international cuisine, they've got it all. My personal favorite is their Chicken Teriyaki with rice – the chicken is always tender, and the sauce is the perfect blend of sweet and savory. Plus, the serving size is just right for a student's budget. Highly recommend giving this place a try if you haven't yet!</p>
                     <p id="fullPost1" style="display:none;">I've been a regular at Kitchen City DLSU for the past semester, and I have to say, this place never disappoints! Whether you're in the mood for Filipino comfort food or international cuisine, they've got it all. My personal favorite is their Chicken Teriyaki with rice – the chicken is always tender, and the sauce is the perfect blend of sweet and savory. Plus, the serving size is just right for a student's budget. Highly recommend giving this place a try if you haven't yet!</p>
@@ -236,14 +245,10 @@
                         <img src="path/to/cos122qt-profile-pic.jpg" alt="Profile Picture" class="profile-pic">
                         <span class="username">ezBill!</span>
                     </div>
-                    <div class="votes">
-                        <span class="upvote vote-btn">⬆️</span>
-                        <span class="vote-count" id="post2-upvotes">0</span>
-                        <span class="downvote vote-btn">⬇️</span>
-                        <span class="vote-count" id="post2-downvotes">0</span>
-                    </div>
+                   
                 </div>
                 <h3>Lunch Review: Chicken Adobo at Kitchen City</h3>
+                <div class="rating">★★★☆☆</div>
                 <div class="post-body">
                     <p>Had lunch at Kitchen City DLSU today and tried their Chicken Adobo. It was amazing! The chicken was tender, and the sauce had the perfect balance of flavors. Definitely coming back for more!</p>
                 </div>

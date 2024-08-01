@@ -70,6 +70,19 @@
             text-decoration: underline;
             color: hsl(18, 75%, 57%);
         }
+
+        .post {
+            position: relative; /* Needed for positioning the rating */
+            margin-bottom: 20px; /* Adjust as needed */
+        }
+
+    .rating {
+            position: absolute;
+            top: 10px; /* Adjust as needed */
+            right: 10px; /* Adjust as needed */
+            font-size: 24px; /* Adjust size as needed */
+            color: gold; /* Adjust color as needed */
+        }
     </style>
 </head>
 
@@ -88,17 +101,14 @@
                         <img src="path/to/cos122qt-profile-pic.jpg" alt="Profile Picture" class="profile-pic">
                         <span class="username">walkthewalk</span>
                     </div>
-                    <div class="votes">
-                        <span class="upvote vote-btn">⬆️</span>
-                        <span class="vote-count" id="post1-upvotes">0</span>
-                        <span class="downvote vote-btn">⬇️</span>
-                        <span class="vote-count" id="post1-downvotes">0</span>
-                    </div>
+                    
                 </div>
+                <h3>BBQ Fries at Potato Corner: A Crunchy Delight!</h3>
+                <div class="rating">★★★☆☆</div>
                 <div class="post-body">
                     <p class="truncated" onclick="toggleTruncate(this, 'fullPost1')">Just had the most amazing snack at Potato Corner! 🥔🎉 Their BBQ flavored fries are out of this world. The perfect combination of crunchy and savory, with just the right amount of seasoning. Can't get enough of them! Highly recommend trying it out if you're in the area. #PotatoCorner #SnackTime #BBQFries
                     </p>
-                    <p id="fullPost1">Just had the most amazing snack at Potato Corner! 🥔🎉 Their BBQ flavored fries are out of this world. The perfect combination of crunchy and savory, with just the right amount of seasoning. Can't get enough of them! Highly recommend trying it out if you're in the area. #PotatoCorner #SnackTime #BBQFries
+                    <p id="fullPost1" style="display:none;">Just had the most amazing snack at Potato Corner! 🥔🎉 Their BBQ flavored fries are out of this world. The perfect combination of crunchy and savory, with just the right amount of seasoning. Can't get enough of them! Highly recommend trying it out if you're in the area. #PotatoCorner #SnackTime #BBQFries
                     </p>
                 </div>
                 
@@ -130,7 +140,7 @@
                         <div class="comment-body">
                             <p class="truncated" onclick="toggleTruncate(this, 'fullComment1')">Totally agree! Potato Corner's BBQ fries are my absolute favorite. Always my go-to snack whenever I'm on campus. 😋🍟
                             </p>
-                            <p id="fullComment1">Totally agree! Potato Corner's BBQ fries are my absolute favorite. Always my go-to snack whenever I'm on campus. 😋🍟
+                            <p id="fullComment1" style="display:none;">Totally agree! Potato Corner's BBQ fries are my absolute favorite. Always my go-to snack whenever I'm on campus. 😋🍟
                             </p>
                         </div>
                         <div class="add-reply">
@@ -189,7 +199,7 @@
                         <div class="comment-body">
                             <p class="truncated" onclick="toggleTruncate(this, 'fullComment3')">Potato Corner never disappoints! Their fries are always fresh and flavorful. Plus, they have the best variety of toppings. Can't wait to try their wasabi flavor next time!
                             </p>
-                            <p id="fullComment3">Potato Corner never disappoints! Their fries are always fresh and flavorful. Plus, they have the best variety of toppings. Can't wait to try their wasabi flavor next time!
+                            <p id="fullComment3" style="display:none;">Potato Corner never disappoints! Their fries are always fresh and flavorful. Plus, they have the best variety of toppings. Can't wait to try their wasabi flavor next time!
                             </p>
                         </div>
                         <div class="add-reply">
@@ -219,7 +229,7 @@
                         <div class="comment-body">
                             <p class="truncated" onclick="toggleTruncate(this, 'fullComment4')">Ugh, now I'm hungry! Thanks for the temptation, haha. Potato Corner's fries are legendary, no doubt about it. Definitely hit them up after my next class. 😄👍
                             </p>
-                            <p id="fullComment4">Ugh, now I'm hungry! Thanks for the temptation, haha. Potato Corner's fries are legendary, no doubt about it. Definitely hit them up after my next class. 😄👍
+                            <p id="fullComment4" style="display:none;">Ugh, now I'm hungry! Thanks for the temptation, haha. Potato Corner's fries are legendary, no doubt about it. Definitely hit them up after my next class. 😄👍
                             </p>
                         </div>
                         <div class="add-reply">
@@ -244,13 +254,10 @@
                         <img src="path/to/cos122qt-profile-pic.jpg" alt="Profile Picture" class="profile-pic">
                         <span class="username">superPanda</span>
                     </div>
-                    <div class="votes">
-                        <span class="upvote vote-btn">⬆️</span>
-                        <span class="vote-count" id="post2-upvotes">0</span>
-                        <span class="downvote vote-btn">⬇️</span>
-                        <span class="vote-count" id="post2-downvotes">0</span>
-                    </div>
+                    
                 </div>
+                <h3>Flavored Fries at Potato Corner: A Taste Sensation</h3>
+                <div class="rating">★★★☆☆</div>
                 <div class="post-body">
                     <p>I recently visited Potato Corner at DLSU and indulged in their amazing flavored fries! The variety of flavors they offer is truly impressive, from classic BBQ to the tangy sour cream and the spicy kick of wasabi. Each fry is perfectly crispy on the outside and fluffy on the inside, making it a satisfying snack for any occasion. Whether you're a fan of savory or spicy flavors, Potato Corner has something for everyone. Highly recommend trying it out
                     </p>
