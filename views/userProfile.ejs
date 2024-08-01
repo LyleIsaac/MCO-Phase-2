@@ -3,19 +3,87 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="/css/styles1.css">
+    <link rel="stylesheet" type="text/css" href="/css/styles2.css">
     <title>User Profile</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: white;
+            color: #333;
+            line-height: 1.2;
+        }
+        .header-box {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #fff;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+        .profile-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 20px auto;
+            padding: 20px;
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            text-align: center;
+            width: 100%;
+        }
+        .profile-details {
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        /*Username*/
+        .profile-details h2 {
+            font-size: 30px;
+            margin-bottom: 30px;
+        }
+        /*description*/
+        .profile-details p {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+        .user-reviews {
+            width: 100%;
+            max-width: 650px;
+            margin: 20px auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .user-reviews h2 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        .review {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+        .review-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .review-body {
+            margin-top: 10px;
+        }
+    </style>
 </head>
 <body>
     <div class="header-box">
         <h1>User Profile</h1>
     </div>
     
-    <!-- pic of user -->
     <div class="profile-container">
-        <div class="profile-pic">
-            <img src="default-avatar.png" alt="Profile Picture" id="profilePic">
-        </div>
         <div class="profile-details">
             <h2 id="username">Username</h2>
             <p id="shortDesc">Short description about the user.</p>
@@ -25,20 +93,9 @@
     <div class="user-reviews">
         <h2>Latest Reviews</h2>
         <div id="reviews">
-            <!-- insert reviews  -->
+            <!-- User's reviews will be inserted here -->
         </div>
     </div>
-
-    <footer>
-        <div class="footer-container">
-            <p>&copy; 2024 Food Delight. All rights reserved.</p>
-            <nav class="footer-nav">
-                <a href="privacy.html">Privacy Policy</a>
-                <a href="terms.html">Terms of Service</a>
-                <a href="contact.html">Contact Us</a>
-            </nav>
-        </div>
-    </footer>
 
     <script src="userProfile.js"></script>
 </body>
