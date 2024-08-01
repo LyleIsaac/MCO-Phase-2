@@ -8,92 +8,130 @@
     <style>
         body {
             font-family: Arial, Helvetica, sans-serif;
-            background-color: white;
-            color: #333;
+            background-color: #feb47b;
+            color: #fff;
             line-height: 1.2;
-        }
-        .header-box {
+            margin: 0;
+            padding: 0;
             display: flex;
             justify-content: center;
-            align-items: center;
-            background-color: #fff;
-            padding: 20px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            margin-bottom: 20px;
+            align-items: flex-start;
+            height: 100vh;
         }
+        /*left side*/
+        .container {
+            display: flex;
+            width: 90%;
+            max-width: 1500px;
+            height: 350px;
+            margin-bottom: 350px;
+            margin-left: 50px;
+        }
+
+        /*left side*/
         .profile-container {
             display: flex;
             flex-direction: column;
             align-items: center;
-            margin: 20px auto;
             padding: 20px;
-            background: #fff;
+            background: white;
             border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            max-width: 400px;
-            text-align: center;
-            width: 100%;
+            margin-right: 20px;
+            flex: 1;
+        }
+        /*if needed*/ 
+        .profile-picture {
+            background-color: gray;
+            border-radius: 50%;
+            width: 100px;
+            height: 100px;
+            margin-bottom: 20px;
         }
         .profile-details {
-            margin-bottom: 30px;
             text-align: center;
         }
-        /*Username*/
+        /*username*/
         .profile-details h2 {
-            font-size: 30px;
-            margin-bottom: 30px;
+            font-size: 24px;
+            margin-bottom: 10px;
+            color: #ff7e5f;
         }
-        /*description*/
+        /*short descrip*/
         .profile-details p {
             font-size: 18px;
-            margin-bottom: 20px;
+            margin-bottom: 10px;
+            color: black;
+        }
+        .votes {
+            font-size: 18px;
+            color: black;
         }
         .user-reviews {
-            width: 100%;
-            max-width: 650px;
-            margin: 20px auto;
-            background: #fff;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
-        .user-reviews h2 {
-            font-size: 24px;
-            margin-bottom: 20px;
+            flex: 3;
         }
         .review {
-            background-color: #fff;
-            border: 1px solid #ddd;
+            background-color: white;
+            /*border: 1px solid #333;*/
             border-radius: 5px;
             padding: 10px;
-            margin-bottom: 10px;
+            margin-bottom: 30px;
         }
         .review-header {
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
+        .review-header .username {
+            color: #ff7e5f;
+        }
+        .review-header .date {
+            color: black;
+        }
         .review-body {
-            margin-top: 10px;
+            margin-top: 30px;
+        }
+        /*Review Title*/
+        .review-body h3 {
+            color: black;
+        }
+        /*Comments*/
+        .review-body p {
+            color: black;
         }
     </style>
 </head>
 <body>
-    <div class="header-box">
-        <h1>User Profile</h1>
-    </div>
-    
-    <div class="profile-container">
-        <div class="profile-details">
-            <h2 id="username">Username</h2>
-            <p id="shortDesc">Short description about the user.</p>
+    <div class="container">
+        <div class="profile-container">
+            <div class="profile-picture"></div>
+            <div class="profile-details">
+                <h2 id="username">Username</h2>
+                <p>Short Description</p>
+                <p class="votes">Votes: 5</p>
+            </div>
         </div>
-    </div>
 
-    <div class="user-reviews">
-        <h2>Latest Reviews</h2>
-        <div id="reviews">
-            <!-- User's reviews will be inserted here -->
+        <div class="user-reviews">
+            <div class="review">
+                <div class="review-header">
+                    <span class="username">@username</span>
+                    <span class="date">Date</span>
+                </div>
+                <div class="review-body">
+                    <h3>Review Title</h3>
+                    <p>Comments</p>
+                </div>
+            </div>
+            <div class="review">
+                <div class="review-header">
+                    <span class="username">@username</span>
+                    <span class="date">Date</span>
+                </div>
+                <div class="review-body">
+                    <h3>Review Title</h3>
+                    <p>Comments</p>
+                </div>
+            </div>
         </div>
     </div>
 
