@@ -6,18 +6,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Perico's Reviews</title>
     <link rel="stylesheet" type="text/css" href="/css/styles1.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
     <style>
-        h2{ 
+        h2 {
             text-transform: uppercase;
             font-size: 28px;
             font-weight: bold;
-            margin-bottom: 20px;    
+            margin-bottom: 20px;
         }
 
         .post, .comment {
             border: 1px solid #ddd;
-            padding: 10px; 
+            padding: 10px;
             margin-bottom: 10px;
             border-radius: 5px;
             background-color: #fff; /* Change background color */
@@ -63,7 +64,7 @@
             margin-left: 5px;
         }
 
-        .username{ 
+        .username {
             font-weight: bold;
             font-style: normal;
             font-size: 125%;
@@ -81,7 +82,7 @@
         <h2>Perico's Reviews</h2>
         <div id="reviewContent" class="review-content">
             <!-- Post 1 -->
-            <div class="post" onclick="toggleComments('post1-comments')">
+            <div class="post">
                 <div class="post-header">
                     <span class="username">zedzedzed12</span>
                     <div class="votes">
@@ -93,9 +94,21 @@
                 </div>
                 <div class="post-body">
                     <p class="truncated" onclick="toggleTruncate(this, 'fullPost1')">Yesterday, I had the pleasure of dining at Perico's, a beloved campus eatery renowned for its delightful and budget-friendly Filipino cuisine. Here's a glimpse into my culinary adventure!</p>
-                    <p id="fullPost1" style="display:none;">Yesterday, I had the pleasure of dining at Perico's, a beloved campus eatery renowned for its delightful and budget-friendly Filipino cuisine. Here's a glimpse into my culinary adventure!</p>
+                    <p id="fullPost1">Yesterday, I had the pleasure of dining at Perico's, a beloved campus eatery renowned for its delightful and budget-friendly Filipino cuisine. Here's a glimpse into my culinary adventure!</p>
                 </div>
-                <div id="post1-comments" class="comments" style="display:none;">
+
+                <div class="add-comment">
+                    <button onclick="toggleCommentForm('post1-comment-form')">
+                        <i class="fa fa-comment"></i> Comment
+                    </button>
+                    <div id="post1-comment-form" class="comment-form" style="display:none;">
+                        <textarea placeholder="Write your comment here..."></textarea>
+                        <input type="file" />
+                        <button onclick="submitComment('post1-comment-form')">Submit</button>
+                    </div>
+                </div>
+
+                <div id="post1-comments" class="comments">
                     <div class="comment">
                         <div class="comment-header">
                             <span class="username">FoodieFan</span>
@@ -108,7 +121,17 @@
                         </div>
                         <div class="comment-body">
                             <p class="truncated" onclick="toggleTruncate(this, 'fullComment1')">Perico's never disappoints! Their chicken adobo is simply heavenly, with the perfect blend of savory and tangy flavors. And don't even get me started on their crispy lechon kawali – it's a true indulgence!</p>
-                            <p id="fullComment1" style="display:none;">Perico's never disappoints! Their chicken adobo is simply heavenly, with the perfect blend of savory and tangy flavors. And don't even get me started on their crispy lechon kawali – it's a true indulgence!</p>
+                            <p id="fullComment1">Perico's never disappoints! Their chicken adobo is simply heavenly, with the perfect blend of savory and tangy flavors. And don't even get me started on their crispy lechon kawali – it's a true indulgence!</p>
+                        </div>
+                        <div class="add-reply">
+                            <button onclick="toggleReplyForm('comment1-reply-form')">
+                                <i class="fa fa-reply"></i> Reply
+                            </button>
+                            <div id="comment1-reply-form" class="comment-form" style="display:none;">
+                                <textarea placeholder="Write your reply here..."></textarea>
+                                <input type="file" />
+                                <button onclick="submitReply('comment1-reply-form')">Submit</button>
+                            </div>
                         </div>
                     </div>
                     <div class="comment">
@@ -124,12 +147,22 @@
                         <div class="comment-body">
                             <p>I couldn't agree more! Perico's is my go-to spot for a satisfying meal on campus. Their sinigang is always on point, and their servings are so generous. Plus, the cozy ambiance adds to the dining experience.</p>
                         </div>
+                        <div class="add-reply">
+                            <button onclick="toggleReplyForm('comment2-reply-form')">
+                                <i class="fa fa-reply"></i> Reply
+                            </button>
+                            <div id="comment2-reply-form" class="comment-form" style="display:none;">
+                                <textarea placeholder="Write your reply here..."></textarea>
+                                <input type="file" />
+                                <button onclick="submitReply('comment2-reply-form')">Submit</button>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
 
             <!-- Post 2 -->
-            <div class="post" onclick="toggleComments('post2-comments')">
+            <div class="post">
                 <div class="post-header">
                     <span class="username">food4lyf</span>
                     <div class="votes">
@@ -142,7 +175,19 @@
                 <div class="post-body">
                     <p>Recently had the pleasure of dining at Perico's, and it was an absolute delight! 🍽️ Their Filipino cuisine is top-notch, with flavors that truly capture the essence of home-cooked meals. The chicken adobo was tender and packed with flavor, while the sinigang had just the right balance of sourness and richness. And let's not forget about the crispy lechon kawali - pure indulgence! Highly recommend Perico's for anyone craving authentic Filipino comfort food. Will definitely be back for more!</p>
                 </div>
-                <div id="post2-comments" class="comments" style="display:none;">
+
+                <div class="add-comment">
+                    <button onclick="toggleCommentForm('post2-comment-form')">
+                        <i class="fa fa-comment"></i> Comment
+                    </button>
+                    <div id="post2-comment-form" class="comment-form" style="display:none;">
+                        <textarea placeholder="Write your comment here..."></textarea>
+                        <input type="file" />
+                        <button onclick="submitComment('post2-comment-form')">Submit</button>
+                    </div>
+                </div>
+
+                <div id="post2-comments" class="comments">
                     <div class="comment">
                         <div class="comment-header">
                             <span class="username">DLSU122</span>
@@ -155,6 +200,16 @@
                         </div>
                         <div class="comment-body">
                             <p>Couldn't agree more! Perico's is my go-to spot for a satisfying meal on campus. Their chicken adobo is my absolute favorite - always perfectly seasoned and cooked to perfection! 🤤</p>
+                        </div>
+                        <div class="add-reply">
+                            <button onclick="toggleReplyForm('comment3-reply-form')">
+                                <i class="fa fa-reply"></i> Reply
+                            </button>
+                            <div id="comment3-reply-form" class="comment-form" style="display:none;">
+                                <textarea placeholder="Write your reply here..."></textarea>
+                                <input type="file" />
+                                <button onclick="submitReply('comment3-reply-form')">Submit</button>
+                            </div>
                         </div>
                     </div>
                     <div class="comment">
@@ -170,6 +225,16 @@
                         <div class="comment-body">
                             <p>The sinigang is my comfort food go-to, especially on a rainy day. Plus, their portions are generous, so you always leave feeling satisfied. Can't wait to try their crispy lechon kawali next time! 😋</p>
                         </div>
+                        <div class="add-reply">
+                            <button onclick="toggleReplyForm('comment4-reply-form')">
+                                <i class="fa fa-reply"></i> Reply
+                            </button>
+                            <div id="comment4-reply-form" class="comment-form" style="display:none;">
+                                <textarea placeholder="Write your reply here..."></textarea>
+                                <input type="file" />
+                                <button onclick="submitReply('comment4-reply-form')">Submit</button>
+                            </div>
+                        </div>
                     </div>
                     <div class="comment">
                         <div class="comment-header">
@@ -184,6 +249,16 @@
                         <div class="comment-body">
                             <p>Had my first taste of Perico's last week, and I'm already hooked! The flavors in their dishes are so authentic, it feels like a taste of home. Definitely adding this to my list of must-visit spots in the area. 🌟</p>
                         </div>
+                        <div class="add-reply">
+                            <button onclick="toggleReplyForm('comment5-reply-form')">
+                                <i class="fa fa-reply"></i> Reply
+                            </button>
+                            <div id="comment5-reply-form" class="comment-form" style="display:none;">
+                                <textarea placeholder="Write your reply here..."></textarea>
+                                <input type="file" />
+                                <button onclick="submitReply('comment5-reply-form')">Submit</button>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -191,6 +266,8 @@
     </section>
 
     <script src="/js/review.js"></script>
-    
+    <script src="/js/comment.js"></script>
+    <script src="/js/reply.js"></script>
+
 </body>
 </html>

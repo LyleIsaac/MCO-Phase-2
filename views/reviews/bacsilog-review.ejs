@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Perico's Reviews</title>
     <link rel="stylesheet" type="text/css" href="/css/styles1.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 
 <body>
@@ -17,7 +18,7 @@
         <h2>Ate Rica's Bacsilog Reviews</h2>
         <div id="reviewContent" class="review-content">
             <!-- Post 1 -->
-            <div class="post" onclick="toggleComments('post1-comments')">
+            <div class="post">
                 <div class="post-header">
                     <span class="username">typhoonX</span>
                     <div class="votes">
@@ -28,13 +29,22 @@
                     </div>
                 </div>
                 <div class="post-body">
-                    <p class="truncated" onclick="toggleTruncate(this, 'fullPost1')">Just had the most amazing meal at Ate Rica's Bacsilog! 🍳🥓 The combination of bacon, garlic fried rice, and a perfectly fried egg topped with their special sauce is simply irresistible. The flavors burst in your mouth with every bite, and it's the ultimate comfort food! If you haven't tried it yet, you're seriously missing out. Highly recommend giving it a taste! 😋 #AteRicasBacsilog #ComfortFood #Delicious
-                    </p>
-                    <p id="fullPost1" style="display:none;">Just had the most amazing meal at Ate Rica's Bacsilog! 🍳🥓 The combination of bacon, garlic fried rice, and a perfectly fried egg topped with their special sauce is simply irresistible. The flavors burst in your mouth with every bite, and it's the ultimate comfort food! If you haven't tried it yet, you're seriously missing out. Highly recommend giving it a taste! 😋 #AteRicasBacsilog #ComfortFood #Delicious
+                    <p class="truncated">Just had the most amazing meal at Ate Rica's Bacsilog! 🍳🥓 The combination of bacon, garlic fried rice, and a perfectly fried egg topped with their special sauce is simply irresistible. The flavors burst in your mouth with every bite, and it's the ultimate comfort food! If you haven't tried it yet, you're seriously missing out. Highly recommend giving it a taste! 😋 #AteRicasBacsilog #ComfortFood #Delicious
                     </p>
                 </div>
+
+                <div class="add-comment">
+                    <button onclick="toggleCommentForm('post1-comment-form')">
+                        <i class="fa fa-comment"></i> Comment
+                    </button>
+                    <div id="post1-comment-form" class="comment-form" style="display:none;">
+                        <textarea placeholder="Write your comment here..."></textarea>
+                        <input type="file" />
+                        <button onclick="submitComment('post1-comment-form')">Submit</button>
+                    </div>
+                </div>
                 
-                <div id="post1-comments" class="comments" style="display:none;">
+                <div id="post1-comments" class="comments">
                     <div class="comment">
                         <div class="comment-header">
                             <span class="username">schoolgirl121</span>
@@ -46,11 +56,18 @@
                             </div>
                         </div>
                         <div class="comment-body">
-                            <p class="truncated" onclick="toggleTruncate(this, 'fullComment1')">Totally agree! Ate Rica's Bacsilog is my go-to whenever I need a pick-me-up. That special sauce they use is pure magic!
+                            <p class="truncated">Totally agree! Ate Rica's Bacsilog is my go-to whenever I need a pick-me-up. That special sauce they use is pure magic!
                             </p>
-                            <p id="fullComment1" style="display:none;">Totally agree! Ate Rica's Bacsilog is my go-to whenever I need a pick-me-up. That special sauce they use is pure magic! 
-
-                            </p>
+                        </div>
+                        <div class="add-reply">
+                            <button onclick="toggleReplyForm('comment1-reply-form')">
+                                <i class="fa fa-reply"></i> Reply
+                            </button>
+                            <div id="comment1-reply-form" class="comment-form" style="display:none;">
+                                <textarea placeholder="Write your reply here..."></textarea>
+                                <input type="file" />
+                                <button onclick="submitReply('comment1-reply-form')">Submit</button>
+                            </div>
                         </div>
                     </div>
 
@@ -68,6 +85,16 @@
                             <p>Oh, I've been craving Ate Rica's Bacsilog for days now! Your post just made me even hungrier. Can't wait to stop by and grab a plate. 
                             </p>
                         </div>
+                        <div class="add-reply">
+                            <button onclick="toggleReplyForm('comment2-reply-form')">
+                                <i class="fa fa-reply"></i> Reply
+                            </button>
+                            <div id="comment2-reply-form" class="comment-form" style="display:none;">
+                                <textarea placeholder="Write your reply here..."></textarea>
+                                <input type="file" />
+                                <button onclick="submitReply('comment2-reply-form')">Submit</button>
+                            </div>
+                        </div>
                     </div>
 
                     <div class="comment">
@@ -75,16 +102,24 @@
                             <span class="username">manilaxman</span>
                             <div class="votes">
                                 <span class="upvote vote-btn">⬆️</span>
-                                <span class="vote-count" id="comment1-upvotes">0</span>
+                                <span class="vote-count" id="comment3-upvotes">0</span>
                                 <span class="downvote vote-btn">⬇️</span>
-                                <span class="vote-count" id="comment1-downvotes">0</span>
+                                <span class="vote-count" id="comment3-downvotes">0</span>
                             </div>
                         </div>
                         <div class="comment-body">
-                            <p class="truncated" onclick="toggleTruncate(this, 'fullComment1')">Ate Rica's Bacsilog never disappoints! It's the perfect blend of savory and satisfying. One bite and you're hooked! 
+                            <p class="truncated">Ate Rica's Bacsilog never disappoints! It's the perfect blend of savory and satisfying. One bite and you're hooked! 
                             </p>
-                            <p id="fullComment1" style="display:none;">Ate Rica's Bacsilog never disappoints! It's the perfect blend of savory and satisfying. One bite and you're hooked! 
-                            </p>
+                        </div>
+                        <div class="add-reply">
+                            <button onclick="toggleReplyForm('comment3-reply-form')">
+                                <i class="fa fa-reply"></i> Reply
+                            </button>
+                            <div id="comment3-reply-form" class="comment-form" style="display:none;">
+                                <textarea placeholder="Write your reply here..."></textarea>
+                                <input type="file" />
+                                <button onclick="submitReply('comment3-reply-form')">Submit</button>
+                            </div>
                         </div>
                     </div>
 
@@ -93,16 +128,24 @@
                             <span class="username">tryntry</span>
                             <div class="votes">
                                 <span class="upvote vote-btn">⬆️</span>
-                                <span class="vote-count" id="comment1-upvotes">0</span>
+                                <span class="vote-count" id="comment4-upvotes">0</span>
                                 <span class="downvote vote-btn">⬇️</span>
-                                <span class="vote-count" id="comment1-downvotes">0</span>
+                                <span class="vote-count" id="comment4-downvotes">0</span>
                             </div>
                         </div>
                         <div class="comment-body">
-                            <p class="truncated" onclick="toggleTruncate(this, 'fullComment1')">I tried Ate Rica's Bacsilog for the first time last week, and now I'm obsessed! That combination of flavors is unlike anything else. Definitely making it a regular part of my dining routine. 🍽️
+                            <p class="truncated">I tried Ate Rica's Bacsilog for the first time last week, and now I'm obsessed! That combination of flavors is unlike anything else. Definitely making it a regular part of my dining routine. 🍽️
                             </p>
-                            <p id="fullComment1" style="display:none;">I tried Ate Rica's Bacsilog for the first time last week, and now I'm obsessed! That combination of flavors is unlike anything else. Definitely making it a regular part of my dining routine. 🍽️
-                            </p>
+                        </div>
+                        <div class="add-reply">
+                            <button onclick="toggleReplyForm('comment4-reply-form')">
+                                <i class="fa fa-reply"></i> Reply
+                            </button>
+                            <div id="comment4-reply-form" class="comment-form" style="display:none;">
+                                <textarea placeholder="Write your reply here..."></textarea>
+                                <input type="file" />
+                                <button onclick="submitReply('comment4-reply-form')">Submit</button>
+                            </div>
                         </div>
                     </div>
 
@@ -110,7 +153,7 @@
             </div>
 
             <!-- Post 2 -->
-            <div class="post" onclick="toggleComments('post2-comments')">
+            <div class="post">
                 <div class="post-header">
                     <span class="username">notalunatic</span>
                     <div class="votes">
@@ -123,42 +166,22 @@
                 <div class="post-body">
                     <p>I recently had the pleasure of trying Ate Rica's Bacsilog, and it was a delightful experience that brought back memories of home-cooked meals. This iconic dish, consisting of bacon, sinaing (plain white rice), and itlog (fried egg), is a Filipino comfort food staple. Ate Rica's version, however, takes it to a whole new level with its flavorful bacon, perfectly seasoned rice, and perfectly cooked egg, all topped with their special savory sauce. It's a hearty and satisfying meal that's perfect for any time of day. If you're craving a taste of home or just want to experience authentic Filipino flavors, Ate Rica's Bacsilog is a must-try!</p>
                 </div>
-                <div id="post2-comments" class="comments" style="display:none;">
+
+                <div class="add-comment">
+                    <button onclick="toggleCommentForm('post2-comment-form')">
+                        <i class="fa fa-comment"></i> Comment
+                    </button>
+                    <div id="post2-comment-form" class="comment-form" style="display:none;">
+                        <textarea placeholder="Write your comment here..."></textarea>
+                        <input type="file" />
+                        <button onclick="submitComment('post2-comment-form')">Submit</button>
+                    </div>
+                </div>
+
+                <div id="post2-comments" class="comments">
                     <div class="comment">
                         <div class="comment-header">
                             <span class="username">razonrunner</span>
-                            <div class="votes">
-                                <span class="upvote vote-btn">⬆️</span>
-                                <span class="vote-count" id="comment3-upvotes">0</span>
-                                <span class="downvote vote-btn">⬇️</span>
-                                <span class="vote-count" id="comment3-downvotes">0</span>
-                            </div>
-                        </div>
-                        <div class="comment-body">
-                            <p>I couldn't agree more! Ate Rica's Bacsilog is my go-to comfort food whenever I'm feeling homesick or just craving something hearty and delicious. The combination of flavors is simply unbeatable.
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="comment">
-                        <div class="comment-header">
-                            <span class="username">goksgirl</span>
-                            <div class="votes">
-                                <span class="upvote vote-btn">⬆️</span>
-                                <span class="vote-count" id="comment4-upvotes">0</span>
-                                <span class="downvote vote-btn">⬇️</span>
-                                <span class="vote-count" id="comment4-downvotes">0</span>
-                            </div>
-                        </div>
-                        <div class="comment-body">
-                            <p>Absolutely! I remember the first time I tried Ate Rica's Bacsilog, and I was blown away by how delicious it was. The bacon was crispy, the rice was perfectly seasoned, and the egg was cooked just right. It's definitely one of my favorite dishes.
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="comment">
-                        <div class="comment-header">
-                            <span class="username">sjwalker</span>
                             <div class="votes">
                                 <span class="upvote vote-btn">⬆️</span>
                                 <span class="vote-count" id="comment5-upvotes">0</span>
@@ -167,8 +190,70 @@
                             </div>
                         </div>
                         <div class="comment-body">
+                            <p>I couldn't agree more! Ate Rica's Bacsilog is my go-to comfort food whenever I'm feeling homesick or just craving something hearty and delicious. The combination of flavors is simply unbeatable.
+                            </p>
+                        </div>
+                        <div class="add-reply">
+                            <button onclick="toggleReplyForm('comment5-reply-form')">
+                                <i class="fa fa-reply"></i> Reply
+                            </button>
+                            <div id="comment5-reply-form" class="comment-form" style="display:none;">
+                                <textarea placeholder="Write your reply here..."></textarea>
+                                <input type="file" />
+                                <button onclick="submitReply('comment5-reply-form')">Submit</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="comment">
+                        <div class="comment-header">
+                            <span class="username">goksgirl</span>
+                            <div class="votes">
+                                <span class="upvote vote-btn">⬆️</span>
+                                <span class="vote-count" id="comment6-upvotes">0</span>
+                                <span class="downvote vote-btn">⬇️</span>
+                                <span class="vote-count" id="comment6-downvotes">0</span>
+                            </div>
+                        </div>
+                        <div class="comment-body">
+                            <p>Absolutely! I remember the first time I tried Ate Rica's Bacsilog, and I was blown away by how delicious it was. The bacon was crispy, the rice was perfectly seasoned, and the egg was cooked just right. It's definitely one of my favorite dishes.
+                            </p>
+                        </div>
+                        <div class="add-reply">
+                            <button onclick="toggleReplyForm('comment6-reply-form')">
+                                <i class="fa fa-reply"></i> Reply
+                            </button>
+                            <div id="comment6-reply-form" class="comment-form" style="display:none;">
+                                <textarea placeholder="Write your reply here..."></textarea>
+                                <input type="file" />
+                                <button onclick="submitReply('comment6-reply-form')">Submit</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="comment">
+                        <div class="comment-header">
+                            <span class="username">sjwalker</span>
+                            <div class="votes">
+                                <span class="upvote vote-btn">⬆️</span>
+                                <span class="vote-count" id="comment7-upvotes">0</span>
+                                <span class="downvote vote-btn">⬇️</span>
+                                <span class="vote-count" id="comment7-downvotes">0</span>
+                            </div>
+                        </div>
+                        <div class="comment-body">
                             <p>Ate Rica's Bacsilog is hands down one of the best meals you can get on campus. It's affordable, filling, and bursting with flavor. Plus, their special sauce adds an extra layer of deliciousness that takes it to another level. Highly recommend it to anyone looking for a satisfying meal!
                             </p>
+                        </div>
+                        <div class="add-reply">
+                            <button onclick="toggleReplyForm('comment7-reply-form')">
+                                <i class="fa fa-reply"></i> Reply
+                            </button>
+                            <div id="comment7-reply-form" class="comment-form" style="display:none;">
+                                <textarea placeholder="Write your reply here..."></textarea>
+                                <input type="file" />
+                                <button onclick="submitReply('comment7-reply-form')">Submit</button>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -177,6 +262,7 @@
     </section>
 
     <script src="/js/review.js"></script>
-    
+    <script src="/js/comment.js"></script>
+    <script src="/js/reply.js"></script>
 </body>
 </html>
