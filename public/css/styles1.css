@@ -36,25 +36,25 @@
 
 .reviews-section {
     position: fixed;
-    top: 60px; /* Adjust to match the height of the header */
+    top: 60px;
     left: 50%;
     transform: translateX(-50%);
     width: 80%;
     max-width: 1200px;
-    height: calc(100vh - 60px); /* Full viewport height minus the height of the header */
+    height: calc(100vh - 60px); 
     padding: 1em;
     background-color: #fff;
     border: 1px solid #ddd;
     border-radius: 5px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    z-index: 10; /* Ensure it is above other elements */
-    overflow-y: auto; /* Allow scrolling if content overflows */
+    z-index: 10; 
+    overflow-y: auto; 
 }
 
 .review-content {
-    flex-grow: 1; /* Make this section take up all available space */
-    overflow-y: auto; /* Allow scrolling if content overflows */
-    padding-right: 10px; /* Add some padding on the right to avoid overlap with the scrollbar */
+    flex-grow: 1; 
+    overflow-y: auto;
+    padding-right: 10px; 
 }
 
 .exit-button {
@@ -117,7 +117,7 @@ body {
 }
 
 header {
-    margin-top: 60px; /* Add space for the top bar */
+    margin-top: 60px; 
     text-align: center;
 }
 
@@ -256,9 +256,9 @@ h2 {
     padding: 10px; 
     margin-bottom: 10px;
     border-radius: 5px;
-    background-color: #fff; /* Change background color */
-    color: #333; /* Change text color */
-    position: relative; /* Position relative to allow absolute positioning of children */
+    background-color: #fff; 
+    color: #333;
+    position: relative; 
 }
 
 .post-header, .comment-header {
@@ -272,7 +272,7 @@ h2 {
 }
 
 .post {
-    position: relative; /* Make sure post is relative to position votes absolutely */
+    position: relative; 
 }
 
 .votes {
@@ -285,7 +285,7 @@ h2 {
 
 .vote-btn {
     cursor: pointer;
-    margin: 0 2px; /* Space between vote buttons */
+    margin: 0 2px; 
 }
 
 .truncated {
@@ -349,45 +349,45 @@ h2 {
 
 .rating {
     font-size: 1.5em;
-    color: #ffd700; /* Gold color for stars */
+    color: #ffd700; 
 }
 
 /* Style for the Add Comment button */
 .add-comment button {
-    background-color: #e0e0e0; /* Light grey background */
-    color: #333; /* Darker text color */
-    border: 1px solid #ccc; /* Light border */
+    background-color: #e0e0e0; 
+    color: #333; 
+    border: 1px solid #ccc; 
     border-radius: 4px;
     padding: 6px 12px;
     font-size: 14px;
     cursor: pointer;
-    display: flex; /* Use flexbox for alignment */
-    align-items: center; /* Center items vertically */
-    gap: 8px; /* Space between icon and text */
+    display: flex; 
+    align-items: center; 
+    gap: 8px; 
     transition: background-color 0.3s ease, color 0.3s ease;
     margin-bottom: 10px;
 }
 
 .add-comment button i {
-    font-size: 16px; /* Adjust icon size */
+    font-size: 16px; 
 }
 
 .add-comment button:hover {
-    background-color: #d4d4d4; /* Slightly darker grey on hover */
-    color: #000; /* Darker text color on hover */
+    background-color: #d4d4d4; 
+    color: #000; 
 }
 
 .add-comment button:focus {
     outline: none;
-    box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.2); /* Subtle shadow for focus */
+    box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.2);
 }
 
 /* Style for the comment form */
 .comment-form {
     margin-top: 10px;
-    background-color: #f9f9f9; /* Light background */
+    background-color: #f9f9f9; 
     padding: 15px;
-    border: 1px solid #ddd; /* Light border */
+    border: 1px solid #ddd; 
     border-radius: 4px;
     margin-bottom: 10px;
 }
@@ -396,14 +396,14 @@ h2 {
     width: 98%;
     height: 60px;
     margin-bottom: 10px;
-    border: 1px solid #ccc; /* Light border */
+    border: 1px solid #ccc; 
     border-radius: 4px;
     padding: 10px;
 }
 
 .comment-form input[type="file"] {
     margin-bottom: 10px;
-    border: 1px solid #ccc; /* Light border */
+    border: 1px solid #ccc; 
     border-radius: 4px;
 }
 
@@ -447,4 +447,14 @@ h2 {
 .username {
     font-size: 16px;
     color: #333;
+}
+
+.logo-container {
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 20px;
+}
+
+.logo {
+    height: 300px;
 }
