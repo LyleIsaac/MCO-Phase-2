@@ -1,9 +1,43 @@
 const express = require('express');
 const router = express.Router();
-const path = require('path');
+const User = require('../../models/User');
+const upload = require('../middleware/upload');
+const bcrypt = require('bcryptjs');
 
-//routes for EJS templates
+// Handle registration
+router.post('/register', (req, res) => {
+    upload(req, res, (err) => {
+        if (err) {
+            return res.render('register', { msg: err });
+        } else {
+            const { username, password, description, is_restaurant } = req.body;
+            const avatar = req.file ? `/uploads/${req.file.filename}` : null;
 
+            if (!avatar) {
+                return res.render('register', { msg: 'Please upload an avatar' });
+            }
+
+            // Hash password
+            bcrypt.genSalt(10, (err, salt) => {
+                bcrypt.hash(password, salt, (err, hash) => {
+                    if (err) throw err;
+
+                    const newUser = new User({
+                        username,
+                        password: hash,
+                        avatar,
+                        description,
+                        isRestaurant: is_restaurant ? true : false
+                    });
+
+                    newUser.save()
+                        .then(user => res.redirect('/login'))
+                        .catch(err => console.log(err));
+                });
+            });
+        }
+    });
+});
 
 // Existing route for the index page
 router.get('/', (req, res) => {
