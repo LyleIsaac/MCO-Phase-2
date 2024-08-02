@@ -4,9 +4,19 @@ const express = require('express');
 const expressLayout = require('express-ejs-layouts');
 const path = require('path');
 const mainRoutes = require('./server/routes/main');
+const mongoose = require('mongoose');
 
 const app = express(); 
 const PORT = 3000 || process.env.PORT; 
+
+// Connect to MongoDB
+mongoose.connect(process.env.MONGO_URI)
+    .then(() => console.log('MongoDB Connected'))
+    .catch(err => console.log(err));
+
+// Middleware for parsing form data
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
 
 //static files from public dir
 app.use(express.static(path.join(__dirname, 'public')));
